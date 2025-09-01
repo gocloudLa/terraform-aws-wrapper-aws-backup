@@ -1,0 +1,28 @@
+module_name: Terraform AWS Backup Module
+module_description: The Terraform wrapper for AWS Backup simplifies the configuration and management of backup policies in the AWS cloud. This wrapper functions as a predefined template, facilitating the creation of backup plans and policies.
+module_badges:
+  - url: "https://github.com/gocloudLa/terraform-aws-wrapper-aws-backup/releases/latest"
+    image: "https://img.shields.io/github/v/release/gocloudLa/terraform-aws-wrapper-aws-backup.svg?style=for-the-badge"
+    alt: "Latest Release"
+  - url: ""
+    image: "https://img.shields.io/github/last-commit/gocloudLa/terraform-aws-wrapper-aws-backup.svg?style=for-the-badge"
+    alt: "Last Commit"
+  - url: "https://registry.terraform.io/modules/gocloudLa/wrapper-aws-backup/aws"
+    image: "https://img.shields.io/badge/Terraform-Registry-7B42BC?style=for-the-badge&logo=terraform&logoColor=white"
+    alt: "Terraform Registry"
+quick_start: |
+  ```hcl
+  aws_backup_parameters = {
+          "00" = {
+              force_destroy = true
+          }
+      }
+  ```
+features: []
+important_notes: ""
+input_table: |
+  | create_enable | Enable or disable resource creation | `bool` | `true` | no |
+  | vault_name | Name of the vault | `string` | `t${local.common_name}-${each.key}` | no |
+  | force_destroy | Force destroy of the resource | `bool` | `false` | no |
+  | kms_key_arn | ARN of the KMS key | `string` | `null` | no |
+  | backup_plan | Configuration for the backup plan | `map` | `{}` | no |
