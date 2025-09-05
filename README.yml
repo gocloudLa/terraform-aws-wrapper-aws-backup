@@ -26,3 +26,4 @@ input_table: |
   | force_destroy | Force destroy of the resource | `bool` | `false` | no |
   | kms_key_arn | ARN of the KMS key | `string` | `null` | no |
   | backup_plan | Configuration for the backup plan | `map` | `{}` | no |
+  | tags | A map of tags to assign to resources. | `map` | `{}` | no |
