@@ -28,13 +28,14 @@ aws_backup_parameters = {
 
 
 ## 📑 Inputs
-| Name          | Description                         | Type     | Default                             | Required |
-| ------------- | ----------------------------------- | -------- | ----------------------------------- | -------- |
-| create_enable | Enable or disable resource creation | `bool`   | `true`                              | no       |
-| vault_name    | Name of the vault                   | `string` | `t${local.common_name}-${each.key}` | no       |
-| force_destroy | Force destroy of the resource       | `bool`   | `false`                             | no       |
-| kms_key_arn   | ARN of the KMS key                  | `string` | `null`                              | no       |
-| backup_plan   | Configuration for the backup plan   | `map`    | `{}`                                | no       |
+| Name          | Description                           | Type     | Default                             | Required |
+| ------------- | ------------------------------------- | -------- | ----------------------------------- | -------- |
+| create_enable | Enable or disable resource creation   | `bool`   | `true`                              | no       |
+| vault_name    | Name of the vault                     | `string` | `t${local.common_name}-${each.key}` | no       |
+| force_destroy | Force destroy of the resource         | `bool`   | `false`                             | no       |
+| kms_key_arn   | ARN of the KMS key                    | `string` | `null`                              | no       |
+| backup_plan   | Configuration for the backup plan     | `map`    | `{}`                                | no       |
+| tags          | A map of tags to assign to resources. | `map`    | `{}`                                | no       |
 
 
 
