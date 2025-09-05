@@ -1,0 +1,10 @@
+title: "Complete Example"
+description: "This example demonstrates a Terraform configuration for AWS Backup using a module sourced from a relative path. It includes a backup plan with specific rules and selections."
+main_purpose: "The main purpose is to configure AWS Backup with a daily backup plan, including scheduling, window times, tags, and retention policies."
+key_features:
+  - "**Backup Plan Scheduling**: The backup plan is scheduled to run every day at 12:30 PM using a cron expression."
+  - "**Start And Completion Windows**: The backup process has a 60-minute start window and a 180-minute completion window."
+  - "**Continuous Backup**: Continuous backup is disabled for this plan."
+  - "**Recovery Point Tags**: Tags are applied to the recovery points for easy identification and management."
+  - "**Retention Policy**: Recovery points are retained for 2 days after creation."
+  - "**Selection Tags**: Backups are selected based on resources tagged with 'AWSBACKUP=true'."
